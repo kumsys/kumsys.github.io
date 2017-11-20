@@ -24,11 +24,11 @@
   <script>
   function insertLogo() {
     var idoc = document.querySelector('iframe').contentDocument
-    var body = idoc.querySelector('body');
-    var logo = idoc.createElement('div');
+    var body = document.querySelector('body');
+    var logo = document.createElement('div');
     logo.id = "gp-logo";
     logo.setAttribute("style", "position: fixed; top: 20px; left: 20px; z-index: 1");
-    var ob   = idoc.createElement('object');
+    var ob   = document.createElement('object');
     ob.setAttribute("data", "logos/33.svg");
     logo.appendChild(ob);
     body.insertBefore(logo, body.firstChild);
